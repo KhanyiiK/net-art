@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paint App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <!-- Add your header content here -->
+    </header>
+
+    <div class="container">
+      <aside class="side-toolbar">
+        <div>
+          <p>Pick Brush Color</p>
+          <input type="color" id="colorPicker" class="color-picker">
+        </div>
+        <div class="tools">
+          <p>Tools</p>
+          <div class="tool" id="brushTool">
+            <button class="tool-btn"><i class="fas fa-paint-brush"></i></button>
+            <span>Brush</span>
+          </div>
+          <div class="tool" id="eraserTool">
+            <button class="tool-btn"><i class="fas fa-eraser"></i></button>
+            <span>Eraser</span>
+          </div>
+        </div>
+        <div>
+          <p>Brush Thickness</p>
+          <div>
+            <input type="range" min="10" max="100" value="25" id="thicknessSlider">
+          </div>
+        </div>
+      </aside>
+
+      <section class="canvas-preview">
+        <canvas id="canvas"></canvas>
+      </section>
+    </div>
+
+    <footer>
+      <!-- Add your footer content here -->
+    </footer>
+  </div>
+
+  <script src="netArt.js"></script>
+</body>
+</html>
