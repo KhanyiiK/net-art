@@ -5,6 +5,8 @@ const eraserTool = document.getElementById('eraserTool');
 const thicknessSlider = document.getElementById('thicknessSlider');
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
+const saveButton = document.getElementById('saveButton');
+const navigateButton = document.getElementById('navigateButton');
 
 let lastX = 0;
 let lastY = 0;
@@ -55,6 +57,8 @@ colorPicker.addEventListener('change', handleColor);
 brushTool.addEventListener('click', handleBrush);
 eraserTool.addEventListener('click', handleEraser);
 thicknessSlider.addEventListener('input', handleThickness);
+saveButton.addEventListener('click', saveDrawing);
+navigateButton.addEventListener('click', navigateToSite);
 
 // Event handling functions
 function handleColor(event) {
@@ -75,6 +79,19 @@ function handleEraser() {
 function handleThickness(event) {
   thickness = event.target.value;
   ctx.lineWidth = thickness;
+}
+
+// Save drawing
+function saveDrawing() {
+  const link = document.createElement('a');
+  link.download = 'drawing.png';
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+}
+
+// Navigate to another site
+function navigateToSite() {
+  window.location.href = 'https://www.example.com'; // Replace with your desired URL
 }
 
 // Initialize the app
