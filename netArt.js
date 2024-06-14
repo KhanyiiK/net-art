@@ -91,7 +91,7 @@ function saveDrawing() {
 
 // Navigate to another site
 function navigateToSite() {
-  window.location.href = 'https://www.example.com'; // Replace with your desired URL
+  window.location.href = 'http://localhost:64413/sap-app1#/'; // Replace with your desired URL
 }
 
 // Initialize the app
